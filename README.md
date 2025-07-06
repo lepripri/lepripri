@@ -1,8 +1,13 @@
-## Hi there 👋
+# bienvenu sur le développement de [le pripri](https://lepripri.github.io/home)
 
-<!--
-**lepripri/lepripri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## explorer le pripri :
 
-Here are some ideas to get you started:
+* [page d'accueil](https://github.com/lepripri/home)
+* [outils développeurs](https://github.com/lepripri/code)
+* [installer logiciels](https://github.com/lepripri/instal)
 
-- 🔭 I’m currently working on home
+## éditer le pripri :
+
+* [éditer la page d'accueil](https://github.com/lepripri/home/blob/main/index.html)
+* [naviguer dans le code de le pripri](https://github.com/lepripri?tab=repositories)
+* [modifier les outils développeur enligne](https://github.com/lepripri/code)
