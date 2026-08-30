@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><title>paramètres généraux | milliminutes</title><title>paramètres généraux | milliminutes</title><style>html, body {background-color: #fcb1e3;width: 100%;width: 600px; height: 100%; margin: 0px} ::backdrop {background: none} dialog {background: #fcb1e3;border-color: #ff0000;border-style: solid;} dialog.message {display: flex;align-items: center;justify-content: center;flex-direction: column; padding-block-start: 0px;} dialog > img[src="https://milliminutes.github.io/milliminutes/icons/Warning.png"] {width: 1em; height: 1em; display: block}</style><style>* {font-family: arial} h1 {text-align: center; display: block; margin: 0px; width: -webkit-fill-available; font-size: 40px;} p {font-size: 20px;} button, a{background-color: #ffffff;border-color: #FF0000;border-style: solid;border-width: 3px;padding-inline: 7px;padding-block: 5px;font-family: arial;font-size: 20px;font-weight: bold;cursor: pointer;outline: none !important;text-decoration: none;color: #000000;}button:hover, button:focus, a:hover, a:focus{font-size: 22px;translate: -8px 0px;margin-inline-end: -30px}button[not-button] {border-style: none;background: none;font-family: revert;cursor: revert;font-size: revert;translate: revert;}</style><style>tablelist {width: 100%; width: -webkit-fill-available; display: flex; flex-direction: column; margin-block: 8px; border-block-start-style: solid; line {display: flex; flex-direction: row; border-block-end-style: solid; textline, actionline {display: flex; align-items: center; width: 50%;padding: 8px; * {font-size: 13px !important; padding: 2px;border-radius: 6px;translate: 0px 0px !important; margin-inline-end: 0px !important;}} actionline {border-inline-start-style: solid; justify-content: center; align-items: center; justify-items: center;}}}</style>
+<html><head><title>paramètres généraux | lepripri</title><title>paramètres généraux | lepripri</title><style>html, body {background-color: #fcb1e3;width: 100%;width: 600px; height: 100%; margin: 0px} ::backdrop {background: none} dialog {background: #fcb1e3;border-color: #ff0000;border-style: solid;} dialog.message {display: flex;align-items: center;justify-content: center;flex-direction: column; padding-block-start: 0px;} dialog > img[src="https://lepripri.github.io/lepripri/icons/Warning.png"] {width: 1em; height: 1em; display: block}</style><style>* {font-family: arial} h1 {text-align: center; display: block; margin: 0px; width: -webkit-fill-available; font-size: 40px;} p {font-size: 20px;} button, a{background-color: #ffffff;border-color: #FF0000;border-style: solid;border-width: 3px;padding-inline: 7px;padding-block: 5px;font-family: arial;font-size: 20px;font-weight: bold;cursor: pointer;outline: none !important;text-decoration: none;color: #000000;}button:hover, button:focus, a:hover, a:focus{font-size: 22px;translate: -8px 0px;margin-inline-end: -30px}button[not-button] {border-style: none;background: none;font-family: revert;cursor: revert;font-size: revert;translate: revert;}</style><style>tablelist {width: 100%; width: -webkit-fill-available; display: flex; flex-direction: column; margin-block: 8px; border-block-start-style: solid; line {display: flex; flex-direction: row; border-block-end-style: solid; textline, actionline {display: flex; align-items: center; width: 50%;padding: 8px; * {font-size: 13px !important; padding: 2px;border-radius: 6px;translate: 0px 0px !important; margin-inline-end: 0px !important;}} actionline {border-inline-start-style: solid; justify-content: center; align-items: center; justify-items: center;}}}</style>
     <style>
         /* Styles de base */
         html, body {
@@ -77,7 +77,7 @@
     </style>
 </head>
 <body>
-    <h1>paramètres généraux | milliminutes</h1>
+    <h1>paramètres généraux | lepripri</h1>
 
     <tablelist>
         <line>
@@ -85,7 +85,7 @@
             <actionline><button name="instal">installer gratuitement . . .</button></actionline>
         </line>
         <line>
-            <textline>milliminutes extension store (gratuit)</textline>
+            <textline>lepripri extension store (gratuit)</textline>
             <actionline><button name="extensions">ouvrir . . .</button></actionline>
         </line>
         <line>
@@ -112,23 +112,23 @@
         </line>
     </tablelist>
 
-    <script type="module" src="https://milliminutes.github.io/module.js"></script>
-    <script src="https://milliminutes.github.io/allPages.js"></script>
+    <script type="module" src="https://lepripri.github.io/module.js"></script>
+    <script src="https://lepripri.github.io/allPages.js"></script>
     
     <script>
         // --- CHARGEMENT DES PARAMÈTRES ---
         if(localStorage.theme) document.querySelector('[name="theme"]').value = localStorage.theme;
 document.querySelector('#AIKey').addEventListener("change", async (e) => {
     const key = e.target.value;
-    const user = milliminutes.auth.currentUser;
+    const user = lepripri.auth.currentUser;
 
     if (user) {
         // On enregistre la clé dans le document de l'utilisateur
-            await milliminutes.db.collection("users").doc(user.uid).set({
+            await lepripri.db.collection("users").doc(user.uid).set({
                 AIKey: key
             }, { merge: true });
-            if (!milliminutes.isConnected) {
-                showMassage("Clé sauvegardée sur ton compte milliminutes !");
+            if (!lepripri.isConnected) {
+                showMassage("Clé sauvegardée sur ton compte lepripri !");
             } else {
                 showMassage("Connecte-toi pour sauvegarder la clé en ligne.");
                 // Backup local au cas où
@@ -151,7 +151,7 @@ document.querySelector('#AIKey').addEventListener("change", async (e) => {
         });
 
         document.querySelector('[name="extensions"]').addEventListener('click', () => {
-            window.open("https://milliminutes.github.io/instal/extension/", "_self");
+            window.open("https://lepripri.github.io/instal/extension/", "_self");
         });
     </script>
 
