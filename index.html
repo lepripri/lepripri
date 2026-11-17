@@ -3,9 +3,18 @@
   <head>
     <link rel="icon" href="https://lepripri.github.io/ressources/icon.ico">
     <link rel="manifest" href="https://lepripri.github.io/azertyuiop/manifest.json">
-    <script type="module" src="https://lepripri.github.io/module.js"></script>
     <script src="https://lepripri.github.io/allPages.js"></script>
   </head>
+  <script>lepripriAPI.import.pageCreatorEditor()
+var changer = lepripriAPI.imported.API.currentPage.change, lang = "en", translate = {fr: {medium: 'moyens habituel + inabituels', sph: ''}, en: {medium: 'created using standard and not standard means', sph: ''}};
+if (navigator.language.substring(0, 2).toLocaleLowerCase() == "fr") {
+    lang = "fr"
+}
+changer.presetLppPage("itemlist", "big", "site le pripri", changer.pressetType.itemList.parrametters("<style>a.title {text-decoration: none;color: light-dark(black, white);display: inline-block;border: none;width: unset;font-size: 20px;}</style>", "", '<h3><a class="title" href="/lepripri/CMJ/">Camille MELIN--JULIEN</a>, <i><a class="title" href="/">le pripri website</a></i>, 2026, <a class="title" href="/lepripri/medium.html">' + translate[lang].medium + '</a></h3>', [
+    changer.pressetType.itemList.generateItem("website", "le pripri website", "/", "/ressources/img/milliminutes.JPG"),
+    changer.pressetType.itemList.generateItem("sph", translate[lang].sph, "/CMJ/sph.html", ""),
+]));</script>
   <body>
+    <i>page loading error, <a href="/basic">le pripri basic</a></i>
   </body>
 </html>
